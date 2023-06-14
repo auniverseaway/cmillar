@@ -6,7 +6,7 @@ indices:
       - '/blog/**'
     exclude:
       - '/blog/drafts/**'
-    target: /blog/query-index.xlsx
+    target: /blog/query-index-2.xlsx
     properties:
       title:
         select: head > meta[property="og:title"]
