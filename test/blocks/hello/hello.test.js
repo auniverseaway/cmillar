@@ -13,7 +13,6 @@ describe('The hello block', () => {
   });
 
   it('Adds world when only hello exists', async () => {
-    
     const hello = document.querySelector('#hello-only');
     await initHello(hello);
     const p = hello.querySelector('p');
