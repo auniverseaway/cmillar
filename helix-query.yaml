@@ -3,10 +3,10 @@ version: 1
 indices:
   blog:
     include:
-      - '/booger/**'
+      - '/blog/**'
     exclude:
-      - '/booger/drafts/**'
-    target: /booger/query-index.xlsx
+      - '/blog/drafts/**'
+    target: /blog/query-index.xlsx
     properties:
       title:
         select: head > meta[property="og:title"]
