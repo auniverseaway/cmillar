@@ -38,6 +38,21 @@ const CONFIG = {
   lcpImg?.removeAttribute('loading');
 }());
 
+function initSidekick() {
+  const initPlugins = async () => {
+    const { default: init } = await import('./sidekick.js');
+    init();
+  };
+
+  if (document.querySelector('helix-sidekick')) {
+    initPlugins();
+  } else {
+    document.addEventListener('sidekick-ready', () => {
+      initPlugins();
+    });
+  }
+}
+
 /*
  * ------------------------------------------------------------
  * Edit below at your own risk
@@ -58,6 +73,7 @@ const miloLibs = setLibs(LIBS);
 }());
 
 (async function loadPage() {
+  initSidekick();
   const { loadArea, setConfig } = await import(`${miloLibs}/utils/utils.js`);
 
   setConfig({ ...CONFIG, miloLibs });

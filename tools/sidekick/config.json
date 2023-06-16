@@ -56,6 +56,17 @@
     },
     {
       "containerId": "tools",
+      "title": "Martech",
+      "id": "martech",
+      "environments": [
+        "dev",
+        "preview",
+        "live"
+      ],
+      "event": "martech"
+    },
+    {
+      "containerId": "tools",
       "id": "locales",
       "title": "Locales",
       "environments": [
