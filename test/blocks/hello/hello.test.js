@@ -20,19 +20,19 @@ describe('The hello block', () => {
     expect(window.gsap).to.exist;
   });
 
-  // it('Adds both texts when they exist', async () => {
-  //   const hello = document.querySelector('#all-copy');
-  //   await initHello(hello);
-  //   const p = hello.querySelector('p');
-  //   expect(p.textContent).to.equal('Chris');
-  //   expect(window.gsap).to.exist;
-  // });
+  it('Adds both texts when they exist', async () => {
+    const hello = document.querySelector('#all-copy');
+    await initHello(hello);
+    const p = hello.querySelector('p');
+    expect(p.textContent).to.equal('Chris');
+    expect(window.gsap).to.exist;
+  });
 
-  // it('Adds hello when nothing exists', async () => {
-  //   const hello = document.querySelector('#no-copy');
-  //   await initHello(hello);
-  //   const h2 = hello.querySelector('h2');
-  //   expect(h2.textContent).to.equal('Hello,');
-  //   expect(window.gsap).to.not.exist;
-  // });
+  it('Adds hello when nothing exists', async () => {
+    const hello = document.querySelector('#no-copy');
+    await initHello(hello);
+    const h2 = hello.querySelector('h2');
+    expect(h2.textContent).to.equal('Hello,');
+    expect(window.gsap).to.not.exist;
+  });
 });
